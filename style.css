@@ -1,0 +1,314 @@
+@font-face {
+  font-family: 'Nintendo Switch Font';
+  src: url(Nintendo_Switch_UI_Font.ttf);
+}
+
+html {
+  background-color: #F2F2F2;
+  font-size: 100%;
+  /* El valor predeterminado de la letra es de 10px */
+  font-family: 'Nintendo Switch Font', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#switch {
+  width: 80em;
+  height: 27em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/** Joy-con izquierdo **/
+#joycon-izq {
+  width: 10vw;
+  height: auto;
+  background-color: #00AED7;
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 4em 7.5em 7.5em 10rem;
+      grid-template-rows: 4em 7.5em 7.5em 10rem;
+}
+
+#menos,
+#mas .horizontal {
+  width: 1.5em;
+  height: 0.5em;
+  background-color: #000;
+  margin-left: auto;
+  margin-top: 2em;
+  margin-right: 1em;
+}
+
+.joystick {
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 4.5em;
+  background-color: #31373D;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'joystick';
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.joystick > .circulo-interno {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: joystick;
+  width: 1.3em;
+  height: 1.3em;
+  padding: 1em;
+  border: 0.2em solid #000;
+  border-radius: 5em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.cruceta {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2em 2em 2em;
+      grid-template-rows: 2em 2em 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.cruceta p {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cruceta > .arriba,
+.cruceta > .abajo {
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  background-color: #31373D;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/*.cruceta > .arriba > .triangulo {
+    width: 0; 
+    height: 0; 
+    border-left: 0.8em solid transparent;
+    border-right: 0.8em solid transparent;
+    border-bottom: 0.8em solid #000;
+}*/
+.cruceta > .izquierda-derecha {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'cruceta';
+}
+
+.cruceta > .izquierda-derecha > .izquierda {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: cruceta;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  background-color: #31373D;
+  margin-left: 1.5em;
+}
+
+.cruceta > .izquierda-derecha > .derecha {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: cruceta;
+  justify-self: flex-end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  background-color: #31373D;
+  margin-right: 1.5em;
+}
+
+#captura {
+  width: 2em;
+  height: 2em;
+  background-color: #31373D;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  margin-right: 2em;
+  border-radius: 0.3em;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'captura';
+}
+
+#captura > .circulo-interno {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: captura;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: #000;
+}
+
+/** Joy-con derecho **/
+#joycon-der {
+  width: 10vw;
+  height: auto;
+  background-color: #FF483C;
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 4em 7.5em 7.5em 10rem;
+      grid-template-rows: 4em 7.5em 7.5em 10rem;
+}
+
+#mas {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'mas';
+}
+
+#mas .horizontal {
+  margin-right: auto;
+  margin-top: 2em;
+  margin-left: 1em;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: mas;
+}
+
+#mas .vertical {
+  height: 1.5em;
+  width: 0.5em;
+  background-color: #000;
+  margin-right: auto;
+  margin-top: 1.5em;
+  margin-left: 1.5em;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: mas;
+}
+
+#home {
+  width: 2.2em;
+  height: 2.2em;
+  background-color: #887F7A;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  margin-left: 2em;
+  border-radius: 2.2em;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'home';
+}
+
+#home > .circulo-interno {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: home;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 1.7em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: #31373D;
+  background-image: url("home-button.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.1em;
+}
+
+/** Pantalla **/
+#pantalla {
+  width: 60%;
+  height: 100%;
+  background-color: #31373D;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'pantalla';
+}
+
+#pantalla:before {
+  content: "";
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pantalla;
+  background: #F2F2F2;
+  width: 1em;
+  height: 1em;
+  border-radius: 0 0 1em;
+}
+
+#pantalla:after {
+  content: "";
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pantalla;
+  background: #F2F2F2;
+  width: 1em;
+  height: 1em;
+  border-radius: 0 0 0 1em;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+#pantalla-interior {
+  width: calc(100% - 3em);
+  height: calc(100% - 2.4em);
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pantalla;
+  background-color: #000;
+  margin: 1.2em 1.5em;
+  border-radius: 1em;
+  background-image: url("logo-switch.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15em;
+}
+/*# sourceMappingURL=style.css.map */
