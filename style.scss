@@ -3,6 +3,7 @@ $joycon-izquierda: #00AED7;
 $joycon-derecha: #FF483C;
 $botones: #31373D;
 $botones-claro: #887F7A;
+$joystick-rayas: #1F2226;
 
 @font-face {
     font-family: 'Nintendo Switch Font';
@@ -43,7 +44,7 @@ body {
 #mas .horizontal {
     width: 1.5em;
     height: 0.5em;
-    background-color: #000;
+    background-color: $joystick-rayas;
     margin-left: auto;
     margin-top: 2em;
     margin-right: 1em;
@@ -57,17 +58,48 @@ body {
     display: grid;
     grid-template-areas: 'joystick';
     justify-self: center;
-}
 
-.joystick > .circulo-interno {
-    grid-area: joystick;
-    width: 1.3em;
-    height: 1.3em;
-    padding: 1em;
-    border: 0.2em solid #000;
-    border-radius: 5em;
-    align-self: center;
-    justify-self: center;
+    > .raya-arriba {
+        grid-area: joystick;
+        height: 0.55em;
+        border-right: 0.18em solid $joystick-rayas;
+        margin: auto;
+        margin-top: 0;
+    }
+
+    > .raya-izquierda {
+        grid-area: joystick;
+        width: 0.55em;
+        height: calc(4.32em / 2);
+        border-bottom: 0.18em solid $joystick-rayas;
+    }
+
+    > .circulo-interno {
+        grid-area: joystick;
+        width: 1.3em;
+        height: 1.3em;
+        padding: 1em;
+        border: 0.18em solid $joystick-rayas;
+        border-radius: 5em;
+        align-self: center;
+        justify-self: center;
+    }
+
+    > .raya-derecha {
+        grid-area: joystick;
+        width: 0.55em;
+        height: calc(4.32em / 2);
+        border-bottom: 0.18em solid $joystick-rayas;
+        margin-left: auto;
+    }
+
+    > .raya-abajo {
+        grid-area: joystick;
+        height: 0.55em;
+        border-right: 0.18em solid $joystick-rayas;
+        margin: auto;
+        margin-bottom: 0;
+    }
 }
 
 .cruceta {
@@ -225,7 +257,7 @@ body {
 #mas .vertical {
     height: 1.5em;
     width: 0.5em;
-    background-color: #000;
+    background-color: $joystick-rayas;
     margin-right: auto;
     margin-top: 1.5em;
     margin-left: 1.5em;

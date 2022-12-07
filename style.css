@@ -50,7 +50,7 @@ body {
 #mas .horizontal {
   width: 1.5em;
   height: 0.5em;
-  background-color: #000;
+  background-color: #1F2226;
   margin-left: auto;
   margin-top: 2em;
   margin-right: 1em;
@@ -68,6 +68,25 @@ body {
       justify-self: center;
 }
 
+.joystick > .raya-arriba {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: joystick;
+  height: 0.55em;
+  border-right: 0.18em solid #1F2226;
+  margin: auto;
+  margin-top: 0;
+}
+
+.joystick > .raya-izquierda {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: joystick;
+  width: 0.55em;
+  height: calc(4.32em / 2);
+  border-bottom: 0.18em solid #1F2226;
+}
+
 .joystick > .circulo-interno {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -75,13 +94,33 @@ body {
   width: 1.3em;
   height: 1.3em;
   padding: 1em;
-  border: 0.2em solid #000;
+  border: 0.18em solid #1F2226;
   border-radius: 5em;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.joystick > .raya-derecha {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: joystick;
+  width: 0.55em;
+  height: calc(4.32em / 2);
+  border-bottom: 0.18em solid #1F2226;
+  margin-left: auto;
+}
+
+.joystick > .raya-abajo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: joystick;
+  height: 0.55em;
+  border-right: 0.18em solid #1F2226;
+  margin: auto;
+  margin-bottom: 0;
 }
 
 .cruceta {
@@ -267,7 +306,7 @@ body {
 #mas .vertical {
   height: 1.5em;
   width: 0.5em;
-  background-color: #000;
+  background-color: #1F2226;
   margin-right: auto;
   margin-top: 1.5em;
   margin-left: 1.5em;
